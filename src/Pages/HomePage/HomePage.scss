@@ -1,0 +1,29 @@
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes glowing {
+  0% {
+      box-shadow: 0 0 5px #ff66b2, 0 0 10px #ff66b2, 0 0 15px #ff4081, 0 0 20px #ff4081, 0 0 25px #ff4081, 0 0 30px #ff4081, 0 0 35px #ff4081;
+  }
+  100% {
+      box-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081;
+  }
+}
+
+.home-page__button {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: pink;
+  border-style: none;
+  font-weight: bold;
+  animation: glowing 1.5s infinite alternate;
+  cursor: pointer; // To indicate the button is clickable
+  transition: transform 0.2s; // Smoothens the hover effect
+
+  &:hover {
+      transform: scale(1.05); // Slightly enlarges the button when hovered
+  }
+}
